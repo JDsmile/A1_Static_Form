@@ -1,3 +1,118 @@
-body{
-    background-color: blue;
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:focus{
+    outline:0;
+ }
+
+.title{
+    text-align: center;
+    margin-bottom: 0.5em;
+}
+.container{
+    max-width: 570px;
+    position: absolute;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+
+}
+form{
+    display: grid;
+    grid-template-areas: 
+    "fname lname"
+    "mnumber mnumber"
+    "email email"
+    "password comfpassword"
+    "checkbox messsage"
+    "info info"
+    "btn btn";
+    grid-template-columns: 1fr 1fr;
+    gap:10px;
+}
+#fname{
+    grid-area: fname;
+
+}
+#lname{
+    grid-area: lname;
+}
+#mobilenum{
+    grid-area: mnumber;
+}
+#email{
+    grid-area: email;
+}
+#password{
+    grid-area: password;
+}
+#cpassword{
+    grid-area: comfpassword;
+}
+.info{
+    grid-area: info;
+}
+
+
+input{
+    padding: 1em 0.75em;
+    border-radius: 5px;
+    border:1px solid gray;
+}
+input::placeholder{
+    font-size: 1rem;
+}
+input:focus{
+    border: 1px solid #bfddf6;
+    box-shadow: 2px 0px 2px 0px #BFDDF6;
+}
+.btn-container{
+    grid-area: btn;
+    display: flex;
+    justify-content: space-between;
+}
+
+.btn{
+    border-radius: 5px;
+    padding:0.75em;
+    border: none;
+    font-size: 1.15rem;
+    color: white;
+    cursor: pointer;
+    width: 270px;
+}
+
+.btn-blue{
+    background-color:#428bca;
+
+}
+.btn-green{
+    background-color: #5cb85c;
+}
+
+.info{
+    display: flex;
+    justify-content:space-between;
+
+}
+.info p{
+    width: 75%;
+}
+.ck-text{
+    font-weight: 700;
+}
+.blue-text{
+    color: #428bca;
+}
+.bg-blue{
+    background-color:#428bca;
+    color: white;
+    padding: 2px 7px;
+    border-radius: 5px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 700;
 }
